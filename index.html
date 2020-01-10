@@ -1,0 +1,70 @@
+<!doctype html >
+<html lang="en">
+	<head >
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Home</title>
+	</head >
+
+
+
+<body id="HomeBack">
+		<div id="mysidenav" class="mynav" >
+
+						<a href="index.html" id="Home" >Home<img id="homep" src="pic/home.png" alt="HauseLogo"></a>
+						<a href="mywork.html" id="End">My Work<img id="Work" src="pic/icons/Work.png" alt="WorkLogo"></a>
+						<a href="aboutme.html" id="Mee">About Me  <img id="AboutM" src="pic/melogo.png" alt="MeLogo"></a>
+						<a href="contact.html" id="Contact" >Contact<img id="Email" src="pic/email.png" alt="EmailLogo"></a>
+
+
+
+				</div><!---menu-wrapper-->
+
+
+
+
+<script>
+var looper;
+var degrees = 0;
+function rotateAnimation(el,speed){
+	var elem = document.getElementById(el);
+	if(navigator.userAgent.match("Chrome")){
+		elem.style.WebkitTransform = "rotate("+degrees+"deg)";
+	} else if(navigator.userAgent.match("Firefox")){
+		elem.style.MozTransform = "rotate("+degrees+"deg)";
+	} else if(navigator.userAgent.match("MSIE")){
+		elem.style.msTransform = "rotate("+degrees+"deg)";
+	} else if(navigator.userAgent.match("Opera")){
+		elem.style.OTransform = "rotate("+degrees+"deg)";
+	} else {
+		elem.style.transform = "rotate("+degrees+"deg)";
+	}
+	looper = setTimeout('rotateAnimation(\''+el+'\','+speed+')',speed);
+	degrees++;
+	if(degrees > 359){
+		degrees = 1;
+	}
+	document.getElementById("status").innerHTML = "rotate("+degrees+"deg)";
+}
+</script>
+
+<img id="img1" src="pic/MyLogoWithNoInitals.png" alt="LogoFreame">
+<img id="Center" src="pic/MyLogoJustInitals.png" alt="text">
+<script>rotateAnimation("img1",30);</script>
+
+
+
+<div class="footer">
+
+
+
+	<a href="https://www.facebook.com/" target="_blank" ><img id="fb" src="pic/FacebokLogo.PNG" alt="facebooklogo"> </a>
+		<a href="https://www.instagram.com/" target="_blank" >	<img id="in" src="pic/InstaLogo.PNG" alt="instagramlogo"></a>
+		<a href="https://twitter.com/?lang=en-gb" target="_blank" >		<img id="tw" src="pic/TwitterLogo.PNG" alt="twitterlogo"></a>
+
+			<div id="Lo"><p>Karolis Zaksauskas</p>
+ </div>
+</div>
+</body>
+
+</html>
